@@ -1,0 +1,47 @@
+body {
+  background-image: url("../img/hatter.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+a{
+  color: black;
+}
+.navbar {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+h1 {
+  color: #343a40;
+  margin-bottom: 20px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #343a40;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+#student-form {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

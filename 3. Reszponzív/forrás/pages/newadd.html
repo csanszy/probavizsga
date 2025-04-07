@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verseny eredmények</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="nav-link" href="../index.html">Verseny eredmények</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="students.html">Diákok</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="newadd.html">Új Tanuló felvétele</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1 class="mt-5">Új Tanuló felvétele</h1>
+      <form id="student-form" class="mt-3 d-grid gap-3 col-6 mx-auto">
+        <label for="name" class="form-label">Név</label>
+        <input type="text" class="form-control" id="name" required />
+
+        <label for="school" class="form-label">Iskola</label>
+        <input type="text" class="form-control" id="school" required />
+
+        <label for="competition" class="form-label">Verseny</label>
+        <select>
+          <option value="0">Válassz versenyt</option>
+          <option value="1">OSZTV</option>
+          <option value="2">EuroSkills</option>
+          <option value="3">WorldSkills</option>
+        </select>
+
+        <label for="percentage" class="form-label">Százalék</label>
+        <input type="number" class="form-control" id="percentage" required />
+
+        <button type="submit" class="btn btn-primary">Hozzáadás</button>
+      </form>
+      <a href="../index.html" class="btn btn-primary mt-3">Back to Home</a>
+    </div>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
