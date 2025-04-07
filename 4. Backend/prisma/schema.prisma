@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model diak {
+  id         Int     @id @default(autoincrement())
+  nev        String  @db.VarChar(255)
+  iskola     String  @db.VarChar(255)
+  szazalek   Int?
+  verseny_id Int
+  verseny    verseny @relation(fields: [verseny_id], references: [id], onDelete: Cascade, map: "diak_ibfk_1")
+
+  @@index([verseny_id], map: "verseny_id")
+}
+
+model verseny {
+  id    Int      @id @default(autoincrement())
+  nev   String   @db.VarChar(255)
+  datum DateTime @db.Date
+  diak  diak[]
+}
